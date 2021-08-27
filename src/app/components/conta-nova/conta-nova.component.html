@@ -1,0 +1,18 @@
+<div>
+    <div class="container card mt-100">
+        <div>
+            <h1 class="display-3 mt-0 mb-20">Criar Novo Servidor</h1>
+        </div>
+        <div>
+            <input class="form-control" type="text" #newAccount placeholder="170.78.99.40" required autocomplete="on"/>
+            <select name="" id="" class="form-control" #status>
+                <option value="ativo">Selcionar ativo</option>
+                <option value="inativo">Selcionar Inativo</option>
+                <option value="desconhecido">Selcionar Desconhecido</option>
+            </select>
+            <div class="mt-10">
+                <button class="btn default" (click)="createAccount(newAccount.value,status.value)">Criar Novo</button>
+            </div>
+        </div>
+    </div>
+</div>

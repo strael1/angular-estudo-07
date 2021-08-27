@@ -1,0 +1,28 @@
+<div class="container mt-40">
+    <div class="card">
+        <div>
+            <h2 class="display-4 mb-10 mt-0">{{account.name}}</h2>
+            <p>O servidor está {{account.status}}</p>
+        </div>
+        <hr />
+        <div>
+            <ul class="main__list_item">
+                <li (click)="setStatus('ativo')" 
+                    [ngClass]="{active: (account.status === 'ativo') ? true : false}">Ativo</li>
+                <li (click)="setStatus('inativo')"
+                    [ngClass]="{active: (account.status === 'inativo') ? true : false}">Inativo</li>
+                <li (click)="setStatus('desconhecido')"
+                    [ngClass]="{active: (account.status === 'desconhecido') ? true : false}">Desconhecido</li>
+
+
+
+
+
+
+                <!-- <li (click)="selectedStatus('ativo')">Ativo</li>
+                <li (click)="selectedStatus('inativo')">Inativo</li>
+                <li (click)="selectedStatus('desconhecido')">Desconhecido</li> -->
+            </ul>
+        </div>
+    </div>
+</div>
